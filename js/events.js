@@ -1,9 +1,10 @@
 function ToggleVisibility( id )
-{ // Toggle BattleChant menu
+{
+	 // Toggle BattleChant menu
 	var element = document.getElementById( id );
 	var state = element.style.display;
 	
-		  $("#"+id).fadeToggle();
+	$("#"+id).fadeToggle();
 	/*if ( state === 'block' )
 	{
 	console.log("LOL2?");
@@ -11,7 +12,6 @@ function ToggleVisibility( id )
 		  $("#"+id).fadeToggle("slow", "linear", function() {
 			//element.style.display = 'none';
 		  });
-		
 	}
 	else
 	{
@@ -2593,8 +2593,7 @@ function ClickWeaponType( weaponType )
 			//formElements["A_Arrow"].options[1] = new Option( SecondArrowOBJ[1][2 + Language], 1 );
 		}
 	}
-	else if ( n_A_JOB === cls_MEC || n_A_JOB === cls_MECt ||
-			  n_A_JOB === cls_GEN || n_A_JOB === cls_GENt )
+	else if ( n_A_JOB === cls_MEC || n_A_JOB === cls_MECt || n_A_JOB === cls_GEN || n_A_JOB === cls_GENt )
 	{
 		formElements["A_Arrow"].style.visibility = "visible";
 		var len = formElements["A_Arrow"].length;

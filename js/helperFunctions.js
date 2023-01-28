@@ -218,11 +218,11 @@ function StCalc(nSC)
 	}
 	else
 	{
-                if (n_A_JOB == cls_KAGOB || n_A_JOB == cls_ENOVI) {
-                        wMAXLV = CONST_MAXLVL_KAGOB_ENOVI;
-                } else {
-                        wMAXLV = CONST_MAXLVL;
-                }
+		if (n_A_JOB == cls_KAGOB || n_A_JOB == cls_ENOVI) {
+			wMAXLV = CONST_MAXLVL_KAGOB_ENOVI;
+		} else {
+			wMAXLV = CONST_MAXLVL;
+		}
 	}
 		
 	if ( nSC == 1 || formElements["BLVauto"].checked == 0 )
@@ -294,24 +294,28 @@ function StCalc2(nSC2)
 }
 
 function n_A_JobSet()
-{ // Check 3rd and Rebirth
+{
+	// Check 3rd and Rebirth
 	n_A_JOB = parseInt(formElements["A_JOB"].value);
 	
 	rebirthClass = 0; // Rebirth
 	thirdClass = 0; // Third Cls
 			
 	if ( n_A_JOB >= cls_LOR && n_A_JOB <= cls_HMER )
-	{ // Rebirth
+	{ 
+		// Rebirth
 		rebirthClass = 1;
 	}
 
 	if ( n_A_JOB >= cls_RUN && n_A_JOB <= cls_GENt && n_A_JOB % 2 == 1 )
-	{ // 3rd - Rebirth
+	{ 
+		// 3rd - Rebirth
 		rebirthClass = 1;
 	}
 	
 	if ( n_A_JOB >= cls_RUN && n_A_JOB <= cls_GENt )
-	{ // 3rd Cls
+	{
+		 // 3rd Cls
 		thirdClass = 1;
 	}
 }
@@ -544,7 +548,7 @@ function AdjustJobLevelList( job )
 	{
 		maxJobLvl = 10;
 	}
-	else if ( job <= cls_ALC || job == cls_KAGOB || ( cls_HSWO <= job && job <= cls_SL ) || job == cls_ENOVI || job == cls_SUM) // 1st~3rd
+	else if ( job <= cls_ALC || job == cls_KAGOB || ( cls_HSWO <= job && job <= cls_SL ) || job == cls_ENOVI || job == cls_SUM) // 1st~2rd
 	{
 		maxJobLvl = 50;
 	}
@@ -552,10 +556,10 @@ function AdjustJobLevelList( job )
 	{
 		maxJobLvl = 99;
 	}
-        else if ( (cls_RUN <= job && job <= cls_GENt) || job == cls_REB )
-        {
-		maxJobLvl = 60;
-        }    
+	else if ( (cls_RUN <= job && job <= cls_GENt) || job == cls_REB ) // 3rdCls
+	{
+		maxJobLvl = 65;
+	}    
 	else
 	{
 		maxJobLvl = 70; // 2nd Adv
@@ -599,17 +603,17 @@ function AdjustBaseLevelList( job )
 	}
 	else
 	{
-                if (job == cls_KAGOB || job == cls_ENOVI) {
-                    maxBaseLvl=CONST_MAXLVL_KAGOB_ENOVI-CONST_MAXLVL; // amount of BLvl [99, 160]
-                }
-				else if (job == cls_SUM)
-				{
-					maxBaseLvl = CONST_MAXLVL_THIRD;
-				}
-				else
-				{
-                    maxBaseLvl=CONST_MAXLVL; // amount of BLvl [1, 99]
-                }
+		if (job == cls_KAGOB || job == cls_ENOVI) {
+			maxBaseLvl=CONST_MAXLVL_KAGOB_ENOVI-CONST_MAXLVL; // amount of BLvl [99, 160]
+		}
+		else if (job == cls_SUM)
+		{
+			maxBaseLvl = CONST_MAXLVL_THIRD;
+		}
+		else
+		{
+			maxBaseLvl=CONST_MAXLVL; // amount of BLvl [1, 99]
+		}
 	}
 	
 	// Adjust Max Base Level List
@@ -803,10 +807,9 @@ function AdjustWeaponTypeList( job )
 	{
 		if ( JobASPD[job][i] != 0 )
 		{
-		    if (i > 0) {
-			weaponTypeArray.push([WeaponName[i][Language], i]);
-		    }
-		    
+			if (i > 0) {
+				weaponTypeArray.push([WeaponName[i][Language], i]);
+			}
 		}
 	}
 	

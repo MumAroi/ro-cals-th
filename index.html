@@ -13,12 +13,13 @@
 	<title>Ragnarok Prime Stat Simulator</title>
 
 	<!--globals-->
-	<script src="js/ga.js" type="text/javascript"></script>
-	<script type="text/javascript">//<![CDATA[
+	<script type="text/javascript">
 		var Language = 1; // japanese = 0, english = 1
 		var PlayerVersusPlayer = 0;
 		var VERSION = "0.0.1"; 
 	</script>
+	
+	<script>document.write(`<script src="js/ga.js?v=${VERSION}"><\/script>`);</script>
 	<script>document.write(`<script src="js/jquery.js?v=${VERSION}"><\/script>`);</script>
 	<script>document.write(`<script src="js/variables.js?v=${VERSION}"><\/script>`);</script>
 	<!--verbage-->
@@ -71,7 +72,7 @@
 </head>
 
 <body>
-	<form name="calcForm" action="https://roprime-simulator.com/(EmptyReference!)">
+	<form name="calcForm" action="https://ro-stat-calculator.pages.dev/(EmptyReference!)">
 		<div class="bgLgTitle lgTitle">
 			Ragnarok Stat Simulator
 		</div>
@@ -85,11 +86,6 @@
 						<tr>
 							<td class="bgDkRow1 padded">
 								<div>
-									<!-- <a href="https://discord.gg/FKA3jDeSCp"><img src="./sprite/discord.png"></img></a>
-									<a href="https://roprime-simulator.com/expscaler.html"><img src="./sprite/exp_scaler.png"></img></a>
-									<a href="https://github.com/Kordasauter/roprime-simulator.com"><img
-											src="./sprite/github.png"></img></a>
-									<a href="https://streamlabs.com/kord_en_live/tip"><img src="./sprite/donate.png"></img></a> -->
 								</div>
 								<div>
 									Latest Notes:
@@ -119,6 +115,7 @@
 					<tbody>
 						<tr>
 							<td class="bgLtRow3 padded optCaption">
+								<div id="old"></div>
 							</td>
 						</tr>
 					</tbody>
