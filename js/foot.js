@@ -187,12 +187,12 @@ with ( document.calcForm )
 	n_A_Equip[eq_ACCII] = parseInt(formElements["A_acces2"].value);
 	
 	//SHADOW
-	n_A_Equip[eq_SHADOW_ARMOR] = parseInt(formElements["A_SHADOW_body"].value);
-	n_A_Equip[eq_SHADOW_WEAPON] = parseInt(formElements["A_SHADOW_weapon"].value);
-	n_A_Equip[eq_SHADOW_SHIELD] = parseInt(formElements["A_SHADOW_shield"].value);
-	n_A_Equip[eq_SHADOW_SHOES] = parseInt(formElements["A_SHADOW_shoes"].value);
-	n_A_Equip[eq_SHADOW_EARRING] = parseInt(formElements["A_SHADOW_earring"].value);
-	n_A_Equip[eq_SHADOW_PENDANT] = parseInt(formElements["A_SHADOW_pendant"].value);
+	n_A_Equip[eq_SHADOW_ARMOR] = parseInt(formElements["A_SHADOW_BODY"].value);
+	n_A_Equip[eq_SHADOW_WEAPON] = parseInt(formElements["A_SHADOW_WEAPON"].value);
+	n_A_Equip[eq_SHADOW_SHIELD] = parseInt(formElements["A_SHADOW_SHIELS"].value);
+	n_A_Equip[eq_SHADOW_SHOES] = parseInt(formElements["A_SHADOW_SHOES"].value);
+	n_A_Equip[eq_SHADOW_EARRING] = parseInt(formElements["A_SHADOW_EARRING"].value);
+	n_A_Equip[eq_SHADOW_PENDANT] = parseInt(formElements["A_SHADOW_PENDANT"].value);
 	
 	//Enchant
 	n_A_Enchant[ench_mal1] = parseInt(formElements["A_WEAPON_ENCHANT_3"].value);
@@ -222,6 +222,13 @@ with ( document.calcForm )
 	n_A_Enchant[ench_HEAD_UP4] = parseInt(formElements["A_HEAD_UPPER_ENCHANT_4"].value);
 	n_A_Enchant[ench_HSE_Armor] = parseInt(formElements["A_HSE"].value);
 	n_A_Enchant[ench_HSE_Head] = parseInt(formElements["A_HSE_HEAD1"].value);
+	n_A_Enchant[ench_SHADOW_ARMOR] = parseInt(formElements["A_SHADOW_BODY_ENCHANT"].value);
+	n_A_Enchant[ench_SHADOW_WEAPON] = parseInt(formElements["A_SHADOW_WEAPON_ENCHANT"].value);
+	n_A_Enchant[ench_SHADOW_SHIELD] = parseInt(formElements["A_SHADOW_SHIELS_ENCHANT"].value);
+	n_A_Enchant[ench_SHADOW_SHOES] = parseInt(formElements["A_SHADOW_SHOES_ENCHANT"].value);
+	n_A_Enchant[ench_SHADOW_EARRING] = parseInt(formElements["A_SHADOW_EARRING_ENCHANT"].value);
+	n_A_Enchant[ench_SHADOW_PENDANT] = parseInt(formElements["A_SHADOW_PENDANT_ENCHANT"].value);
+	
 	
 	SetEquip();
 }
@@ -2248,24 +2255,24 @@ with(document.calcForm)
 		A_acces1.options[0] = null;
 		A_acces2.options[0] = null;
 	}
-	var len = A_SHADOW_body.length;
+	var len = A_SHADOW_BODY.length;
 	for(var i=0;i<len;i++)
-		A_SHADOW_body.options[0] = null;
-	var len = A_SHADOW_shield.length;
+		A_SHADOW_BODY.options[0] = null;
+	var len = A_SHADOW_SHIELS.length;
 	for(var i=0;i<len;i++)
-		A_SHADOW_shield.options[0] = null;
-	var len = A_SHADOW_weapon.length;
+		A_SHADOW_SHIELS.options[0] = null;
+	var len = A_SHADOW_WEAPON.length;
 	for(var i=0;i<len;i++)
-		A_SHADOW_weapon.options[0] = null;
-	var len = A_SHADOW_shoes.length;
+		A_SHADOW_WEAPON.options[0] = null;
+	var len = A_SHADOW_SHOES.length;
 	for(var i=0;i<len;i++)
-		A_SHADOW_shoes.options[0] = null;
-	var len = A_SHADOW_earring.length;
+		A_SHADOW_SHOES.options[0] = null;
+	var len = A_SHADOW_EARRING.length;
 	for(var i=0;i<len;i++)
-		A_SHADOW_earring.options[0] = null;
-	var len = A_SHADOW_pendant.length;
+		A_SHADOW_EARRING.options[0] = null;
+	var len = A_SHADOW_PENDANT.length;
 	for(var i=0;i<len;i++)
-		A_SHADOW_pendant.options[0] = null;
+		A_SHADOW_PENDANT.options[0] = null;
 	// insert first time ? -----------
 	var nx = 1 + Language*2;
 	if(first_check == 0)
@@ -2281,12 +2288,12 @@ with(document.calcForm)
 		A_acces1.options[0] = new Option(ITEM_NAME[326][nx],ItemOBJ[326][0]);
 		A_acces2.options[0] = new Option(ITEM_NAME[326][nx],ItemOBJ[326][0]);
 		
-		A_SHADOW_body.options[0] = new Option(ITEM_NAME[1640][nx],ItemOBJ[1640][0]);
-		A_SHADOW_weapon.options[0] = new Option(ITEM_NAME[1642][nx],ItemOBJ[1642][0]);
-		A_SHADOW_shield.options[0] = new Option(ITEM_NAME[1641][nx],ItemOBJ[1641][0]);
-		A_SHADOW_shoes.options[0] = new Option(ITEM_NAME[1643][nx],ItemOBJ[1643][0]);
-		A_SHADOW_earring.options[0] = new Option(ITEM_NAME[1644][nx],ItemOBJ[1644][0]);
-		A_SHADOW_pendant.options[0] = new Option(ITEM_NAME[1645][nx],ItemOBJ[1645][0]);
+		A_SHADOW_BODY.options[0] = new Option(ITEM_NAME[1640][nx],ItemOBJ[1640][0]);
+		A_SHADOW_WEAPON.options[0] = new Option(ITEM_NAME[1642][nx],ItemOBJ[1642][0]);
+		A_SHADOW_SHIELS.options[0] = new Option(ITEM_NAME[1641][nx],ItemOBJ[1641][0]);
+		A_SHADOW_SHOES.options[0] = new Option(ITEM_NAME[1643][nx],ItemOBJ[1643][0]);
+		A_SHADOW_EARRING.options[0] = new Option(ITEM_NAME[1644][nx],ItemOBJ[1644][0]);
+		A_SHADOW_PENDANT.options[0] = new Option(ITEM_NAME[1645][nx],ItemOBJ[1645][0]);
 		return;
 	}
 	first_check = 2;
@@ -2445,47 +2452,47 @@ with(document.calcForm)
 			A_acces2.options[i] = new Option("[missing name]",ItemOBJ[z][0]);
 		}
 	}
-	for(i=0;i<wsj[8];i++){ // A_SHADOW_body - fill dropdown
+	for(i=0;i<wsj[8];i++){ // A_SHADOW_BODY - fill dropdown
 		z = workB[8][i];
 		if(z < ITEM_NAME.length)
-			A_SHADOW_body.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
+			A_SHADOW_BODY.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
 		else
-			A_SHADOW_body.options[i] = new Option("[missing name]",ItemOBJ[z][0]);
+			A_SHADOW_BODY.options[i] = new Option("[missing name]",ItemOBJ[z][0]);
 	}
-	for(i=0;i<wsj[9];i++){ // A_SHADOW_weapon- fill dropdown
+	for(i=0;i<wsj[9];i++){ // A_SHADOW_WEAPON- fill dropdown
 		z = workB[9][i];
 		if(z < ITEM_NAME.length)
-			A_SHADOW_weapon.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
+			A_SHADOW_WEAPON.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
 		else
-			A_SHADOW_weapon.options[i] = new Option("[missing name]",ItemOBJ[z][0]);
+			A_SHADOW_WEAPON.options[i] = new Option("[missing name]",ItemOBJ[z][0]);
 	}
-	for(i=0;i<wsj[10];i++){ // A_SHADOW_shield - fill dropdown
+	for(i=0;i<wsj[10];i++){ // A_SHADOW_SHIELS - fill dropdown
 		z = workB[10][i];
 		if(z < ITEM_NAME.length)
-			A_SHADOW_shield.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
+			A_SHADOW_SHIELS.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
 		else
-			A_SHADOW_shield.options[i] = new Option("[missing name]",ItemOBJ[z][0]);
+			A_SHADOW_SHIELS.options[i] = new Option("[missing name]",ItemOBJ[z][0]);
 	}
-	for(i=0;i<wsj[11];i++){ // A_SHADOW_shoes - fill dropdown
+	for(i=0;i<wsj[11];i++){ // A_SHADOW_SHOES - fill dropdown
 		z = workB[11][i];
 		if(z < ITEM_NAME.length)
-			A_SHADOW_shoes.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
+			A_SHADOW_SHOES.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
 		else
-			A_SHADOW_shoes.options[i] = new Option("[missing name]",ItemOBJ[z][0]);
+			A_SHADOW_SHOES.options[i] = new Option("[missing name]",ItemOBJ[z][0]);
 	}
-	for(i=0;i<wsj[12];i++){ // A_SHADOW_earring - fill dropdown
+	for(i=0;i<wsj[12];i++){ // A_SHADOW_EARRING - fill dropdown
 		z = workB[12][i];
 		if(z < ITEM_NAME.length)
-			A_SHADOW_earring.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
+			A_SHADOW_EARRING.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
 		else
-			A_SHADOW_earring.options[i] = new Option("[missing name]",ItemOBJ[z][0]);
+			A_SHADOW_EARRING.options[i] = new Option("[missing name]",ItemOBJ[z][0]);
 	}
-	for(i=0;i<wsj[13];i++){ // A_SHADOW_pendant - fill dropdown
+	for(i=0;i<wsj[13];i++){ // A_SHADOW_PENDANT - fill dropdown
 		z = workB[13][i];
 		if(z < ITEM_NAME.length)
-			A_SHADOW_pendant.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
+			A_SHADOW_PENDANT.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
 		else
-			A_SHADOW_pendant.options[i] = new Option("[missing name]",ItemOBJ[z][0]);
+			A_SHADOW_PENDANT.options[i] = new Option("[missing name]",ItemOBJ[z][0]);
 	}
 }}
 
@@ -2950,12 +2957,12 @@ with(document.calcForm)
 		A_acces1.value = 326;
 		A_acces2.value = 326;
 		
-		A_SHADOW_body.value = 1640;
-		A_SHADOW_weapon.value = 1641;
-		A_SHADOW_shield.value = 1642;
-		A_SHADOW_shoes.value = 1643;
-		A_SHADOW_earring.value = 1644;
-		A_SHADOW_pendant.value = 1645;
+		A_SHADOW_BODY.value = 1640;
+		A_SHADOW_WEAPON.value = 1641;
+		A_SHADOW_SHIELS.value = 1642;
+		A_SHADOW_SHOES.value = 1643;
+		A_SHADOW_EARRING.value = 1644;
+		A_SHADOW_PENDANT.value = 1645;
 
 
 		A_head1_card.value = 0;
@@ -3574,6 +3581,13 @@ function Init()
 	formElements["A_HEAD_UPPER_ENCHANT_4"].disabled = true;
 	formElements["A_HEAD_UPPER_ENCHANT_3"].disabled = true;
 	formElements["A_HEAD_UPPER_ENCHANT_2"].disabled = true;
+
+	formElements["A_SHADOW_BODY_ENCHANT"].disabled = true;
+	formElements["A_SHADOW_WEAPON_ENCHANT"].disabled = true;
+	formElements["A_SHADOW_SHIELS_ENCHANT"].disabled = true;
+	formElements["A_SHADOW_SHOES_ENCHANT"].disabled = true;
+	formElements["A_SHADOW_EARRING_ENCHANT"].disabled = true;
+	formElements["A_SHADOW_PENDANT_ENCHANT"].disabled = true;
 	
 	// -------------------------------------------------
 	

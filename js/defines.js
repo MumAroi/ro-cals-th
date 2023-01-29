@@ -555,6 +555,12 @@ ench_HEAD_UP3=23;
 ench_HEAD_UP4=24;
 ench_HSE_Armor=25;
 ench_HSE_Head=26;
+ench_SHADOW_ARMOR=27;
+ench_SHADOW_WEAPON=28;
+ench_SHADOW_SHIELD=29;
+ench_SHADOW_SHOES=30;
+ench_SHADOW_EARRING=31;
+ench_SHADOW_PENDANT=32;
 ench_MAX=24;
 
 }

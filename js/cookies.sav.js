@@ -299,7 +299,7 @@ function Load(LoadData)
 			B_Enemy.value = StoN2(w.substr(x+7,2));*/
 				/* !New! Test for Shadows and enchant save*/
 			// SaveData[x++] = NtoS2(eval(A_SHADOW_BODY_DEF_PLUS),1);
-			// SaveData[x++] = NtoS2(eval(A_SHADOW_body),1);
+			// SaveData[x++] = NtoS2(eval(A_SHADOW_BODY),1);
 	}
 }
 

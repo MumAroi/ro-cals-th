@@ -2125,6 +2125,83 @@ function ClickAcces( data, numAccess )
 	StAllCalc();
 }
 
+function ClickShadow( data )
+{
+	if (ItemOBJ[data][1] == 65) {
+		// itm_type_SHADOW_ARMOR
+		if (data == 1640) {
+			formElements["A_SHADOW_BODY_ENCHANT"].disabled = true;
+			CleanEnchantShadow("A_SHADOW_BODY_ENCHANT");
+		} else {
+			formElements["A_SHADOW_BODY_ENCHANT"].disabled = false;
+			for ( var i = 0; EnchantListOBJ[110][i] != "NULL"; i++ )
+			{
+				formElements["A_SHADOW_BODY_ENCHANT"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[110][i]][1],EnchantOBJ[EnchantListOBJ[110][i]][0]);
+			}
+		}
+	} else if(ItemOBJ[data][1] == 66) {
+		//itm_type_SHADOW_WEAPON
+		if (data == 1641) {
+			formElements["A_SHADOW_WEAPON_ENCHANT"].disabled = true;
+			CleanEnchantShadow("A_SHADOW_WEAPON_ENCHANT");
+		} else {
+			formElements["A_SHADOW_WEAPON_ENCHANT"].disabled = false;
+			for ( var i = 0; EnchantListOBJ[110][i] != "NULL"; i++ )
+			{
+				formElements["A_SHADOW_WEAPON_ENCHANT"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[110][i]][1],EnchantOBJ[EnchantListOBJ[110][i]][0]);
+			}
+		}
+	} else if(ItemOBJ[data][1] == 67) {
+		// itm_type_SHADOW_SHIELD
+		if (data == 1642) {
+			formElements["A_SHADOW_SHIELS_ENCHANT"].disabled = true;
+			CleanEnchantShadow("A_SHADOW_SHIELS_ENCHANT");
+		} else {
+			formElements["A_SHADOW_SHIELS_ENCHANT"].disabled = false;
+			for ( var i = 0; EnchantListOBJ[110][i] != "NULL"; i++ )
+			{
+				formElements["A_SHADOW_SHIELS_ENCHANT"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[110][i]][1],EnchantOBJ[EnchantListOBJ[110][i]][0]);
+			}
+		}
+	} else if(ItemOBJ[data][1] == 68) {
+		// itm_type_SHADOW_SHOES
+		if (data == 1643) {
+			formElements["A_SHADOW_SHOES_ENCHANT"].disabled = true;
+			CleanEnchantShadow("A_SHADOW_SHOES_ENCHANT");
+		} else {
+			formElements["A_SHADOW_SHOES_ENCHANT"].disabled = false;
+			for ( var i = 0; EnchantListOBJ[110][i] != "NULL"; i++ )
+			{
+				formElements["A_SHADOW_SHOES_ENCHANT"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[110][i]][1],EnchantOBJ[EnchantListOBJ[110][i]][0]);
+			}
+		}
+	} else if(ItemOBJ[data][1] == 69) {
+		// itm_type_SHADOW_EARRING
+		if (data == 1644) {
+			formElements["A_SHADOW_EARRING_ENCHANT"].disabled = true;
+			CleanEnchantShadow("A_SHADOW_EARRING_ENCHANT");
+		} else {
+			formElements["A_SHADOW_EARRING_ENCHANT"].disabled = false;
+			for ( var i = 0; EnchantListOBJ[110][i] != "NULL"; i++ )
+			{
+				formElements["A_SHADOW_EARRING_ENCHANT"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[110][i]][1],EnchantOBJ[EnchantListOBJ[110][i]][0]);
+			}
+		}
+	}  else if(ItemOBJ[data][1] == 70) {
+		// itm_type_SHADOW_PENDANT
+		if (data == 1645) {
+			formElements["A_SHADOW_PENDANT_ENCHANT"].disabled = true;
+			CleanEnchantShadow("A_SHADOW_PENDANT_ENCHANT");
+		} else {
+			formElements["A_SHADOW_PENDANT_ENCHANT"].disabled = false;
+			for ( var i = 0; EnchantListOBJ[110][i] != "NULL"; i++ )
+			{
+				formElements["A_SHADOW_PENDANT_ENCHANT"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[110][i]][1],EnchantOBJ[EnchantListOBJ[110][i]][0]);
+			}
+		}
+	}
+}
+
 function ClickHeadUp( data, isRefine )
 {
 	//upper head id
@@ -2509,6 +2586,21 @@ function EnchToName(numEnch)
 			return "not a mora enchant";
 			break;
 	}
+}
+
+function CleanEnchantShadow(formEq)
+{
+	//clean enchant list
+	var len = formElements[formEq].length;
+	for ( var i = 0; i < len ; i++ )
+	{
+		formElements[formEq].options[0] = null;
+	}
+	
+	formElements[formEq].options[0] = new Option(EnchantOBJ[EnchantListOBJ[0][0]][1],EnchantOBJ[EnchantListOBJ[0][0]][0]);
+	formElements[formEq].disabled = true;
+	StAllCalc();
+	
 }
 
 function CleanEnchant(formEq)

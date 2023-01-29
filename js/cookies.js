@@ -270,17 +270,17 @@ function LoadCookie()
 	if(!isNaN(SaveData[89]))
 	{
 		formElements["A_SHADOW_BODY_DEF_PLUS"].value = SaveData[89];
-		formElements["A_SHADOW_body"].value = SaveData[90];
+		formElements["A_SHADOW_BODY"].value = SaveData[90];
 		formElements["A_SHADOW_WEAPON_DEF_PLUS"].value = SaveData[91];
-		formElements["A_SHADOW_weapon"].value = SaveData[92];
+		formElements["A_SHADOW_WEAPON"].value = SaveData[92];
 		formElements["A_SHADOW_SHIELD_DEF_PLUS"].value = SaveData[93];
-		formElements["A_SHADOW_shield"].value = SaveData[94];
+		formElements["A_SHADOW_SHIELS"].value = SaveData[94];
 		formElements["A_SHADOW_SHOES_DEF_PLUS"].value = SaveData[95];
-		formElements["A_SHADOW_shoes"].value = SaveData[96];
+		formElements["A_SHADOW_SHOES"].value = SaveData[96];
 		formElements["A_SHADOW_EARRING_DEF_PLUS"].value = SaveData[97];
-		formElements["A_SHADOW_earring"].value = SaveData[98];
+		formElements["A_SHADOW_EARRING"].value = SaveData[98];
 		formElements["A_SHADOW_PENDANT_DEF_PLUS"].value = SaveData[99];
-		formElements["A_SHADOW_pendant"].value = SaveData[100];
+		formElements["A_SHADOW_PENDANT"].value = SaveData[100];
 		
 		
 		formElements["A_WEAPON_ENCHANT_2"].value = SaveData[101];
@@ -695,17 +695,17 @@ function SaveCookie()
 	SaveData[88] = parseInt(formElements["A_SHOES_DEF_PLUS"].value);
 	
 	SaveData[89] = parseInt(formElements["A_SHADOW_BODY_DEF_PLUS"].value);
-	SaveData[90] = parseInt(formElements["A_SHADOW_body"].value);
+	SaveData[90] = parseInt(formElements["A_SHADOW_BODY"].value);
 	SaveData[91] = parseInt(formElements["A_SHADOW_WEAPON_DEF_PLUS"].value);
-	SaveData[92] = parseInt(formElements["A_SHADOW_weapon"].value);
+	SaveData[92] = parseInt(formElements["A_SHADOW_WEAPON"].value);
 	SaveData[93] = parseInt(formElements["A_SHADOW_SHIELD_DEF_PLUS"].value);
-	SaveData[94] = parseInt(formElements["A_SHADOW_shield"].value);
+	SaveData[94] = parseInt(formElements["A_SHADOW_SHIELS"].value);
 	SaveData[95] = parseInt(formElements["A_SHADOW_SHOES_DEF_PLUS"].value);
-	SaveData[96] = parseInt(formElements["A_SHADOW_shoes"].value);
+	SaveData[96] = parseInt(formElements["A_SHADOW_SHOES"].value);
 	SaveData[97] = parseInt(formElements["A_SHADOW_EARRING_DEF_PLUS"].value);
-	SaveData[98] = parseInt(formElements["A_SHADOW_earring"].value);
+	SaveData[98] = parseInt(formElements["A_SHADOW_EARRING"].value);
 	SaveData[99] = parseInt(formElements["A_SHADOW_PENDANT_DEF_PLUS"].value);
-	SaveData[100] = parseInt(formElements["A_SHADOW_pendant"].value);
+	SaveData[100] = parseInt(formElements["A_SHADOW_PENDANT"].value);
 	
 	SaveData[101] = parseInt(formElements["A_WEAPON_ENCHANT_2"].value);
 	SaveData[102] = parseInt(formElements["A_WEAPON_ENCHANT_3"].value);
@@ -915,17 +915,17 @@ function URLOUT()
 	SaveData[index++] = NtoS2( parseInt(document.calcForm.E_BOOST_CASTING.value), 1 );
 	
 	SaveData[index++] = NtoS2( parseInt(formElements["A_SHADOW_BODY_DEF_PLUS"].value), 1 );
-	SaveData[index++] = NtoS2( parseInt(formElements["A_SHADOW_body"].value), 3 );
+	SaveData[index++] = NtoS2( parseInt(formElements["A_SHADOW_BODY"].value), 3 );
 	SaveData[index++] = NtoS2( parseInt(formElements["A_SHADOW_WEAPON_DEF_PLUS"].value), 1 );
-	SaveData[index++] = NtoS2( parseInt(formElements["A_SHADOW_weapon"].value), 3 );
+	SaveData[index++] = NtoS2( parseInt(formElements["A_SHADOW_WEAPON"].value), 3 );
 	SaveData[index++] = NtoS2( parseInt(formElements["A_SHADOW_SHIELD_DEF_PLUS"].value), 1 );
-	SaveData[index++] = NtoS2( parseInt(formElements["A_SHADOW_shield"].value), 3 );
+	SaveData[index++] = NtoS2( parseInt(formElements["A_SHADOW_SHIELS"].value), 3 );
 	SaveData[index++] = NtoS2( parseInt(formElements["A_SHADOW_SHOES_DEF_PLUS"].value), 1 );
-	SaveData[index++] = NtoS2( parseInt(formElements["A_SHADOW_shoes"].value), 3 );
+	SaveData[index++] = NtoS2( parseInt(formElements["A_SHADOW_SHOES"].value), 3 );
 	SaveData[index++] = NtoS2( parseInt(formElements["A_SHADOW_EARRING_DEF_PLUS"].value), 1 );
-	SaveData[index++] = NtoS2( parseInt(formElements["A_SHADOW_earring"].value), 3 );
+	SaveData[index++] = NtoS2( parseInt(formElements["A_SHADOW_EARRING"].value), 3 );
 	SaveData[index++] = NtoS2( parseInt(formElements["A_SHADOW_PENDANT_DEF_PLUS"].value), 1 );
-	SaveData[index++] = NtoS2( parseInt(formElements["A_SHADOW_pendant"].value), 3 );
+	SaveData[index++] = NtoS2( parseInt(formElements["A_SHADOW_PENDANT"].value), 3 );
 	
 	SaveData[index++] = NtoS2( parseInt(formElements["A_WEAPON_ENCHANT_2"].value), 3 );
 	SaveData[index++] = NtoS2( parseInt(formElements["A_WEAPON_ENCHANT_3"].value), 3 );
@@ -1295,22 +1295,22 @@ with( document.calcForm )
 		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.E_BOOST_CASTING.value = StoN2(w.substr(index++,1));
 			
 		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_BODY_DEF_PLUS.value = StoN2(w.substr(index++,1));
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_body.value = StoN2(w.substr(index,3));
+		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_BODY.value = StoN2(w.substr(index,3));
 		index=index + 3;
 		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_WEAPON_DEF_PLUS.value = StoN2(w.substr(index++,1));
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_weapon.value = StoN2(w.substr(index,3));
+		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_WEAPON.value = StoN2(w.substr(index,3));
 		index=index + 3;
 		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_SHIELD_DEF_PLUS.value = StoN2(w.substr(index++,1));
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_shield.value = StoN2(w.substr(index,3));
+		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_SHIELS.value = StoN2(w.substr(index,3));
 		index=index + 3;
 		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_SHOES_DEF_PLUS.value = StoN2(w.substr(index++,1));
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_shoes.value = StoN2(w.substr(index,3));
+		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_SHOES.value = StoN2(w.substr(index,3));
 		index=index + 3;
 		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_EARRING_DEF_PLUS.value = StoN2(w.substr(index++,1));
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_earring.value = StoN2(w.substr(index,3));
+		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_EARRING.value = StoN2(w.substr(index,3));
 		index=index + 3;
 		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_PENDANT_DEF_PLUS.value = StoN2(w.substr(index++,1));
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_pendant.value = StoN2(w.substr(index,3));
+		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_PENDANT.value = StoN2(w.substr(index,3));
 		index=index + 3;
 		
 		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_WEAPON_ENCHANT_2.value = StoN2(w.substr(index,3));
